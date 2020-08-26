@@ -27,7 +27,7 @@ class Node:
     self.right = None
     self.value = value
   def preorder(self):
-    print self.value,
+    print(self.value, end = " ")
     if self.left: self.left.preorder()
     if self.right: self.right.preorder()
 
@@ -56,7 +56,8 @@ root.right.left = Node('f')
 
 root.preorder()
 # a b d e c f
-print "\n"
+print("")
 invert(root)
 root.preorder()
+print("")
 # a c f b e d

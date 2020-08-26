@@ -24,5 +24,5 @@ def singleNumber(nums):
         if nums[i] != nums[i+1] and nums[i] != nums[i-1]:
             return nums[i]
 
-print singleNumber([4, 3, 2, 4, 1, 3, 2])
+print(singleNumber([4, 3, 2, 4, 1, 3, 2]))
 # 1

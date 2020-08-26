@@ -27,5 +27,5 @@ def eval(expression):
                 if expression [1] == '+':
                     return int(expression[0]) + eval(expression[2:])
 
-print eval('- (3 + ( 2 - 1 ) )')
+print(eval('- (3 + ( 2 - 1 ) )'))
 # -4

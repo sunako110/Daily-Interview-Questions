@@ -18,6 +18,6 @@ def two_sum(list, k):
         exit()
     return False
 
-print two_sum([4,7,1,-3,2], 5)
-print two_sum([10, 5, 3, 7, 3], 6)
+print(two_sum([4,7,1,-3,2], 5))
+print(two_sum([10, 5, 3, 7, 3], 6))
 # True

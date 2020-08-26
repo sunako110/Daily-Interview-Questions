@@ -43,5 +43,5 @@ def num_ways(n, m):
 
 
 
-print num_ways(2, 2)
+print(num_ways(2, 2))
 # 2

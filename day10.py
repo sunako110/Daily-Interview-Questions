@@ -25,7 +25,7 @@ def check(lst):
                 modified = True
     return True
 
-print check([13, 4, 7])
+print(check([13, 4, 7]))
 # True
-print check([5,1,3,2,5])
+print(check([5,1,3,2,5]))
 # False

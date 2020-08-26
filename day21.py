@@ -43,8 +43,9 @@ class Node(object):
   def prettyPrint(self):
     c = self
     while c:
-      print c.val,
+      print(c.val, end = " ")
       c = c.next
+    print("")
 
 a = Node(1)
 a.next = Node(2)

@@ -15,6 +15,6 @@ class  Solution:
         return max if max != 0 else len(s)
 
 
-print Solution().lengthOfLongestSubstring('abrkaabcdefghijjxxx')
+print(Solution().lengthOfLongestSubstring('abrkaabcdefghijjxxx'))
 # 10
 

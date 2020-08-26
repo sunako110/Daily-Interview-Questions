@@ -18,12 +18,11 @@ class Solution:
     min = 99999
     for i in range(len(nums)):
         for j in range(i+1,len(nums)+1):
-            print(nums[i:j])
             if sum(nums[i:j]) == s:
                 if len(nums[i:j]) < min:
                     min = len(nums[i:j])
 
     return min
 
-print Solution().minSubArrayLen([2, 3, 1, 2, 4, 3], 7)
+print(Solution().minSubArrayLen([2, 3, 1, 2, 4, 3], 7))
 # 2

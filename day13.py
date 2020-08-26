@@ -15,7 +15,7 @@ def staircase(n):
         return 2
     return staircase(n-1) + staircase(n-2)
 
-print staircase(4)
+print(staircase(4))
 # 5
-print staircase(5)
+print(staircase(5))
 # 8

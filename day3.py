@@ -18,7 +18,7 @@ class Solution:
         start_pos = (len(s)-1)/2
         end_pos = -((len(s)-1)/2 + 1)
         while start_pos > 0 or end_pos < 0:
-            print start_pos, end_pos
+            print(start_pos, end_pos)
             if s[start_pos] == s[end_pos + 1] and end_pos + 1 < 0:
                 end_pos += 1
             elif s[start_pos - 1] == s[end_pos] and start_pos - 1 >= 0:

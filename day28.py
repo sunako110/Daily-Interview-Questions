@@ -11,5 +11,5 @@ def findKthLargest(nums, k):
     nums.sort(reverse = True)
     return nums[k-1]
 
-print findKthLargest([3, 5, 2, 4, 6, 8], 3)
+print(findKthLargest([3, 5, 2, 4, 6, 8], 3))
 # 5

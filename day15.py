@@ -41,5 +41,5 @@ def distance(s1, s2):
         return distance(s1[1:],s2[1:])
     return 1 + min(distance(s1,s2[1:]),distance(s1[1:],s2),distance(s1[1:],s2[1:]))
 
-print distance('biting','sitting')
+print(distance('biting','sitting'))
 # 2

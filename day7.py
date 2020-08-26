@@ -30,5 +30,5 @@ def partition (arr,l,h):
     arr[i+1], arr[h] = arr[h], arr[i+1]
     return (i+1)
 
-print sortNums([3, 3, 2, 1, 3, 2, 1])
+print(sortNums([3, 3, 2, 1, 3, 2, 1]))
 # [1, 1, 2, 2, 3, 3, 3]

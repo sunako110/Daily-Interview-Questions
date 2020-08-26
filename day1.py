@@ -60,6 +60,6 @@ l2.next.next = ListNode(4)
 
 result = Solution().addTwoNumbers(l1, l2)
 while result:
-    print result.val
+    print(result.val)
     result = result.next
 # 7 0 8

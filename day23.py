@@ -64,6 +64,7 @@ node.next.next.next.next.next = Node(4)
 node.next.next.next.next.next.next = Node(-4)
 node = removeConsecutiveSumTo0(node)
 while node:
-  print node.value,
+  print(node.value, end = " ")
   node = node.next
+print("")
 # 10

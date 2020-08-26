@@ -41,5 +41,5 @@ matrix = [
     ['O', 'B', 'Q', 'P'],
     ['A', 'N', 'O', 'B'],
     ['M', 'A', 'S', 'S']]
-print word_search(matrix, 'FOAM')
+print(word_search(matrix, 'FOAM'))
 # True

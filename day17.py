@@ -30,8 +30,8 @@ graph = {
   'b': {'b2':{}},
   'c': {}
 }
-print find_cycle(graph)
+print(find_cycle(graph))
 # False
 graph['c'] = graph
-print find_cycle(graph)
+print(find_cycle(graph))
 # True

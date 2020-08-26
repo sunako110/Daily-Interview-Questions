@@ -44,5 +44,5 @@ class Solution(object):
     return dominoes
 
 
-print Solution().pushDominoes('..R...L..R.')
+print(Solution().pushDominoes('..R...L..R.'))
 # ..RR.LL..RR
