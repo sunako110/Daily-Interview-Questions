@@ -28,7 +28,7 @@ def recursive(node, height):
         elif node.right:
             return [] + [recursive(node.right, height - 1)]
         elif node.left:
-            return recursive(node.left, height - 1)
+            return recursive(node.left, height - 1) + []
 
 #     1
 #    / \
