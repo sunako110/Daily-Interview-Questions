@@ -12,10 +12,12 @@
 # Output: 2
 # Explanation: the subarray [4,3] has the minimal length under the problem constraint.
 
+import sys
+
 class Solution:
   def minSubArrayLen(self, nums, s):
     # Fill this in
-    min = 99999
+    min = sys.maxsize
     for i in range(len(nums)):
         for j in range(i+1,len(nums)+1):
             if sum(nums[i:j]) == s:
