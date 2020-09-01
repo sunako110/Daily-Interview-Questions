@@ -20,8 +20,6 @@ class Solution(object):
                         answer.append([nums[i],nums[j],nums[k]])
         return answer
 
-
-
 # Test Program
 nums = [1, -2, 1, 0, 5]
 print(Solution().threeSum(nums))
