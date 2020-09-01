@@ -34,10 +34,13 @@ def courses_to_take(course_to_prereqs):
         color[node] = 2
 
         for neighbour in course_to_prereqs[node]:
+            # traverse any unvisited node
             if color[neighbour] == 1:
                 dfs(neighbour)
+            # if the node is visited, there is a cycle
             elif color[neighbour] == 2:
                 flag.is_possible = False
+        # the deepest node (i.e. course with no prerequisite) will be appended first
         color[node] = 3
         seq.append(node)
 
