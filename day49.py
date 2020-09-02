@@ -16,10 +16,11 @@ def schedule(intervals):
                 merge[j] = (merge[j][0], intervals[i][1])
                 break
             else:
-                merge.append(intervals[i])
-                break
+                if j == len(merge) - 1:
+                    merge.append(intervals[i])
+                else:
+                    continue
     return len(merge)
-
 
 list = [(30, 75), (0, 50), (60, 150)]
 print(schedule(list))
