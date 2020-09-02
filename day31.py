@@ -17,7 +17,7 @@ def merge(intervals):
     merge = [intervals[0]]
     index = 0
     for i in range(1,len(intervals)):
-        if intervals[index][1] >= intervals[i][0]:
+        if merge[index][1] >= intervals[i][0]:
             merge[index] = (min(intervals[index][0], intervals[i][0]),max(intervals[index][1], intervals[i][1]))
         else:
             index += 1
