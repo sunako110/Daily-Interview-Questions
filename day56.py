@@ -44,6 +44,9 @@ def evaluate(root):
                 exit()
             else:
                 return evaluate(root.right) / evaluate(root.left)
+        else:
+            print("error: unknown operator")
+            exit()
 
 tree = Node(TIMES)
 tree.left = Node(PLUS)
