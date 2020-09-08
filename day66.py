@@ -15,20 +15,27 @@
 
 def hIndex(publications):
     # Fill this in.
-    if max(publications) == 0:
+    # if max(publications) == 0:
+    #     return 0
+    # dp = [1] * len(publications)
+    # for i in range(1, len(publications)):
+    #     count = 0
+    #     for j in range(0,i+1):
+    #         if publications[j] >= dp[i-1] + 1:
+    #             count += 1
+    #     if count == dp[i - 1] + 1:
+    #         dp[i] = count
+    #     else:
+    #         dp[i] = dp[i - 1]
+    # print(dp)
+    # return dp[-1]
+    if not publications:
         return 0
-    dp = [1] * len(publications)
-    for i in range(1, len(publications)):
-        count = 0
-        for j in range(0,i+1):
-            if publications[j] >= dp[i-1] + 1:
-                count += 1
-        if count == dp[i - 1] + 1:
-            dp[i] = count
-        else:
-            dp[i] = dp[i - 1]
-    print(dp)
-    return dp[-1]
+    publications.sort()
+    for i in range(1,len(publications)+1)[::-1]:
+        if publications[-i] >= i:
+            return i
+    return 0
 
 print(hIndex([5, 3, 3, 1, 0]))
 # 3
