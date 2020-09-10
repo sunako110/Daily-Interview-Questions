@@ -12,24 +12,17 @@
 class Solution(object):
     def compress(self, chars):
         # Fill this in.
-        chars.sort()
-        result = []
-        repeat = 1
-        for i in range(len(chars)-1):
-            if chars[i] == chars[i+1]:
-                repeat += 1
-            elif repeat > 1:
-                result.append(chars[i])
-                result.append(repeat)
-                repeat = 1
-            else:
-                result.append(chars[i])
-        if repeat > 1:
-            result.append(chars[-1])
-            result.append(repeat)
-        else:
-            result.append(chars[-1])
-        return result
+        anchor = write = 0
+        for read, c in enumerate(chars):
+            if read + 1 == len(chars) or chars[read+1] != c:
+                chars[write] = chars[anchor]
+                write += 1
+                if read > anchor:
+                    for digit in str(read - anchor + 1):
+                        chars[write] = digit
+                        write += 1
+                anchor = read + 1
+        return chars[:write]
 
 print(Solution().compress(['a', 'a', 'b', 'c', 'c', 'c']))
 # ['a', '2', 'b', 'c', '3']
