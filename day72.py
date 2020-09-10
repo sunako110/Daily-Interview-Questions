@@ -18,9 +18,8 @@ class Solution(object):
                 chars[write] = chars[anchor]
                 write += 1
                 if read > anchor:
-                    for digit in str(read - anchor + 1):
-                        chars[write] = digit
-                        write += 1
+                    chars[write] = str(read - anchor + 1)
+                    write += 1
                 anchor = read + 1
         return chars[:write]
 
