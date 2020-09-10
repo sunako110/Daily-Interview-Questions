@@ -12,11 +12,13 @@ class Node:
     self.left = None
     self.right = None
 
+
 def maxPathSum(root):
     # Fill this in.
     res = 0
     partial_sum, res = maxPathSumUtil(root,res)
     return res
+
 
 def maxPathSumUtil(root, res):
     if not root:
@@ -31,6 +33,7 @@ def maxPathSumUtil(root, res):
     res = max(sum, partial_sum)
     return partial_sum, res
 
+
 # (* denotes the max path)
 #       *10
 #       /  \
@@ -39,6 +42,8 @@ def maxPathSumUtil(root, res):
 #   *20  1    -25
 #             /  \
 #            3    4
+
+
 root = Node(10)
 root.left = Node(2)
 root.right = Node(10)
