@@ -7,20 +7,22 @@
 #
 # For example. [(30, 75), (0, 50), (60, 150)] should return 2.
 
+import heapq
 def schedule(intervals):
+    if len(intervals) == 0:
+        return 0
     intervals.sort()
-    merge = [intervals[0]]
+    heap = [(intervals[0][1],intervals[0][0])]
+    heapq.heapify(heap)
     for i in range(1,len(intervals)):
-        for j in range(len(merge)):
-            if merge[j][1] <= intervals[i][0]:
-                merge[j] = (merge[j][0], intervals[i][1])
-                break
-            else:
-                if j == len(merge) - 1:
-                    merge.append(intervals[i])
-                else:
-                    continue
-    return len(merge)
+        curr = heapq.heappop(heap)
+        if curr[0] <= intervals[i][0]:
+            new_curr = (intervals[i][1],curr[1])
+            heapq.heappush(heap,new_curr)
+        else:
+            heapq.heappush(heap,(intervals[i][1], intervals[i][0]))
+            heapq.heappush(heap, curr)
+    return len(heap)
 
 list = [(30, 75), (0, 50), (60, 150)]
 print(schedule(list))
